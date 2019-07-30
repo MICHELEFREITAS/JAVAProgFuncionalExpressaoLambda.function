@@ -29,12 +29,10 @@ public class Program {
 		//cada elemento da lista aplicar uma instancia do UpperCaseName
 		//atribui para uma nova lista de String. O map aplica uma nova lista(só funciona para stream)
 		
-
-		//tipo de entrada o Product e saída String que é a resposta
-		Function<Product, String> func = p -> p.getName().toUpperCase();
 		
-		//aplica o elemento não estático da classe Product a cada elemento da lista
-		List<String> names = list.stream().map(func).collect(Collectors.toList());
+		
+		//expressaoo lambida inline passada direto dentro do map 
+		List<String> names = list.stream().map(p -> p.getName().toUpperCase()).collect(Collectors.toList());
 		
 		
 		//imprimir a lista
