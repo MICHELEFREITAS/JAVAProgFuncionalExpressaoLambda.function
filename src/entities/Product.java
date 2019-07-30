@@ -28,17 +28,9 @@ public class Product {
 	public void setPrice(Double price) {
 		this.price = price;
 	}
-	
-	//stático só mexe com objeto que vai receber como parâmetro
-	public static void staticPriceUpdate(Product p) {
-		p.setPrice(p.getPrice() * 1.1);
-	}
-	
-	//não estático, não recebe argumento, price do próprio obj
-	public void nonStaticPriceUpdate() {
-		//setPrice(getPrice() * 1.1);
-		//ou
-		price = price * 1.1;
+	//método estático
+	public static String staticUpperCaseName(Product p) {
+		return p.getName().toUpperCase();
 	}
 
 	@Override
