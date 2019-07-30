@@ -28,8 +28,8 @@ public class Program {
 		//cada elemento da lista aplicar uma instancia do UpperCaseName
 		//atribui para uma nova lista de String. O map aplica uma nova lista(só funciona para stream)
 		
-		//aplica o elemento estático da classe Product a cada elemento da lista
-		List<String> names = list.stream().map(Product::staticUpperCaseName).collect(Collectors.toList());
+		//aplica o elemento não estático da classe Product a cada elemento da lista
+		List<String> names = list.stream().map(Product::nonstaticUpperCaseName).collect(Collectors.toList());
 		
 		
 		//imprimir a lista
